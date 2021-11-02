@@ -33,8 +33,8 @@ const Home: NextPage = () => {
             <h1 className="display-4">Kerla</h1>
             <p className="lead">A new operating system with Linux ABI compatibility, written in Rust.</p>
             <div>
-              <Button size="lg" href="/docs/introduction.html" className="mr-10">Quickstart</Button>{' '}
-              <Button size="lg" href="/docs/quickstart.html" variant="outline-primary">Documentation</Button>{' '}
+              <Button size="lg" href="/docs/quickstart.html" className="mr-10">Quickstart</Button>{' '}
+              <Button size="lg" href="/docs/introduction.html" variant="outline-primary">Documentation</Button>{' '}
               <Button size="lg" href="https://github.com/nuta/kerla" variant="outline-primary">GitHub</Button>
             </div>
           </Col>
