@@ -18,7 +18,7 @@ jobs:
         run: brew install --cask drawio
 
       - name: Install Homebrew packages
-        run: brew install mdbook yarn
+        run: brew install mdbook yarn rust
 
       - name: Yarn
         run: yarn
