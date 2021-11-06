@@ -16,3 +16,5 @@ mkdir -p build
 touch build/kerla.initramfs
 make src-docs CARGO=$HOME/.cargo/bin/cargo
 mv target/doc ../public/src
+
+yarn build
