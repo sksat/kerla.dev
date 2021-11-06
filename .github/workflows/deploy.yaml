@@ -21,10 +21,7 @@ jobs:
         run: "curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh  -s -- -y --default-toolchain nightly"
 
       - name: Install Homebrew packages
-        run: brew install mdbook yarn
-
-      - name: Yarn
-        run: yarn
+        run: brew install mdbook
 
       - name: Build Docs
         run: ./build-docs.sh
