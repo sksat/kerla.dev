@@ -18,12 +18,9 @@ jobs:
         run: brew install --cask drawio
 
       - name: Install Homebrew packages
-        run: brew install mdbook yarn
+        run: brew install mdbook 
 
       - name: Build Docs
-        run: ./build-docs.sh
-
-      - name: Remove unnecessary files
         run: ./build-docs.sh
 
       - name: Deploy
