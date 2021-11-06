@@ -11,8 +11,3 @@ git pull
 pushd Documentation
 mdbook build -d ../../public/docs
 popd
-
-mkdir -p build
-touch build/kerla.initramfs
-make src-docs CARGO=$HOME/.cargo/bin/cargo
-mv target/doc ../public/src
