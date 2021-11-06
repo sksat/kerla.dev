@@ -14,5 +14,5 @@ popd
 
 mkdir build
 touch build/kerla.initramfs
-make src-docs
+make src-docs CARGO=$HOME/.cargo/bin/cargo
 mv target/doc ../public/src
