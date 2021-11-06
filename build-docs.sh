@@ -9,10 +9,10 @@ cd kerla
 git pull
 
 pushd Documentation
-mdbook build -d ../public/docs
+mdbook build -d ../../public/docs
 popd
 
-mkdir build
+mkdir -p build
 touch build/kerla.initramfs
 make src-docs CARGO=$HOME/.cargo/bin/cargo
 mv target/doc ../public/src
