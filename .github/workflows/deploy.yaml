@@ -26,7 +26,7 @@ jobs:
       - name: Remove unnecessary files
         run: ./build-docs.sh
 
-      - uses: amondnet/vercel-action@v20
+      - name: Deploy
         run: vercel deploy --prod
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
