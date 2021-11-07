@@ -7,7 +7,5 @@ fi
 
 cd kerla
 git pull
-
-pushd Documentation
-mdbook build -d ../../public/docs
-popd
+make docs
+mv build/docs ../../public/docs
