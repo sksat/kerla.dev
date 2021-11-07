@@ -8,4 +8,4 @@ fi
 cd kerla
 git pull
 make docs
-mv build/docs ../../public/docs
+mv build/docs ../public/docs
