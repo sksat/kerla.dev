@@ -14,6 +14,7 @@ source $HOME/.cargo/env
 rustup override set nightly
 rustup component add rust-src
 
+mkdir build
 touch build/kerla.initramfs
 make src-docs
 mv target/doc ../public
