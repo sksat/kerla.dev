@@ -1,10 +1,29 @@
+import { AppBar, Box, Button, Container, CssBaseline, Link, Stack, Toolbar, Typography } from '@mui/material'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 import React from 'react'
-import { Col, Container, Nav, Row, Navbar, Card, Button, CardGroup, ButtonGroup } from 'react-bootstrap'
-import { FaDiscord, FaGithub } from 'react-icons/fa'
 
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#263238',
+      light: '#4f5b62',
+      dark: '#000a12',
+      contrastText: '#fefefe',
+    },
+    secondary: {
+      main: '#01579b',
+      light: '#4f83cc',
+      dark: '#002f6c',
+      contrastText: '#fefefe',
+    },
+  },
+});
+
+// Based on a MUI's template:
+// https://github.com/mui-org/material-ui/tree/master/docs/src/pages/getting-started/templates/album
 const Home: NextPage = () => {
   return (
     <div>
@@ -13,37 +32,67 @@ const Home: NextPage = () => {
         <meta name="description" content="A new operating system in Rust, with Linux ABI compatibility." />
       </Head>
 
-      <Navbar bg="dark" variant="dark">
-        <Container>
-          <Navbar.Brand>Kerla</Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/docs/introduction.html">Documentation</Nav.Link>
-          </Nav>
-          <Nav>
-            <Nav.Link href="https://github.com/nuta/kerla"><FaGithub /> GitHub</Nav.Link>
-            <Nav.Link href="https://discord.gg/6Pu4ujpp6h"><FaDiscord /> Discord</Nav.Link>
-          </Nav>
-        </Container>
-      </Navbar>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <AppBar position="relative" elevation={0}>
+          <Toolbar>
+            <Typography variant="h6" color="inherit" noWrap sx={{ flexGrow: 1 }}>
+              Kerla
+            </Typography>
 
-      <Container fluid className="bg-light p-5 rounded-lg m-3 my-auto">
-        <Row>
-          <Col>
-            <h1 className="display-4">Kerla</h1>
-            <p className="lead">A new operating system with Linux ABI compatibility, written in Rust.</p>
-            <div>
-              <Button size="lg" href="/docs/quickstart.html" className="mr-10">Quickstart</Button>{' '}
-              <Button size="lg" href="/docs/introduction.html" variant="outline-primary">Documentation</Button>{' '}
-              <Button size="lg" href="https://github.com/nuta/kerla" variant="outline-primary">GitHub</Button>
-            </div>
-          </Col>
-          <Col>
-            <Image src="/screenshot.png" width="640" height="412" className="rounded mx-auto d-block"
-              alt="A screenshot of Kerla. It can run Linux binaries like Busybox and curl!" />
-          </Col>
-        </Row>
-      </Container>
+            <Button color="inherit" href="/docs">Docs</Button>
+            <Button color="inherit" href="https://github.com/nuta/kerla">GitHub</Button>
+          </Toolbar>
+        </AppBar>
+
+        <main>
+          <Box sx={{ bgcolor: 'background.paper', pt: 8, pb: 6 }}>
+            <Container maxWidth="sm">
+              <Typography
+                component="h1"
+                variant="h2"
+                align="center"
+                color="text.primary"
+                gutterBottom
+              >
+                Kerla
+              </Typography>
+              <Typography variant="h5" align="center" color="text.secondary" paragraph>
+                A new operating system with Linux ABI compatibility, written in Rust.
+              </Typography>
+              <Stack
+                sx={{ pt: 4 }}
+                direction="row"
+                spacing={2}
+                justifyContent="center"
+              >
+                <Button variant="contained" href="/docs/quickstart.html">Quickstart</Button>
+                <Button variant="outlined" href="https://github.com/nuta/kerla">GitHub</Button>
+                <Button variant="outlined" href="https://discord.gg/6Pu4ujpp6h">Discord</Button>
+              </Stack>
+
+              <Box sx={{ pt: 4 }}>
+                <Image src="/screenshot.png" width="640" height="412"
+                  alt="A screenshot of Kerla. It can run Linux binaries like Busybox and curl!" />
+              </Box>
+            </Container>
+          </Box>
+        </main>
+        <footer>
+          <Box sx={{ bgcolor: 'background.paper', p: 6 }} component="footer">
+            <Typography
+              variant="subtitle1"
+              align="center"
+              color="text.secondary"
+              component="p"
+            >
+              Made by Kerla Authors.<br />
+              <Link href="https://github.com/nuta/kerla" color="inherit" sx={{ mr: "1rem" }}>GitHub</Link>
+              <Link href="https://discord.gg/6Pu4ujpp6h" color="inherit">Discord</Link>
+            </Typography>
+          </Box>
+        </footer>
+      </ThemeProvider>
     </div>
   )
 }
