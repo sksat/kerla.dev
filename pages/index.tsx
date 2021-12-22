@@ -23,7 +23,7 @@ const theme = createTheme({
 });
 
 // Based on a MUI's template:
-// https://github.com/mui-org/material-ui/tree/master/docs/src/pages/getting-started/templates/album
+// https://github.com/mui-org/material-ui/tree/master/docs/index.html/src/pages/getting-started/templates/album
 const Home: NextPage = () => {
   return (
     <div>
@@ -40,7 +40,7 @@ const Home: NextPage = () => {
               Kerla
             </Typography>
 
-            <Button color="inherit" href="/docs">Docs</Button>
+            <Button color="inherit" href="/docs/index.html">Docs</Button>
             <Button color="inherit" href="https://github.com/nuta/kerla">GitHub</Button>
             <Button color="inherit" href="https://discord.gg/6Pu4ujpp6h">Discord</Button>
           </Toolbar>
@@ -87,6 +87,7 @@ const Home: NextPage = () => {
               component="p"
             >
               Made by Kerla Authors.<br />
+              <Link href="/docs/index.html" color="inherit">Docs</Link>
               <Link href="https://github.com/nuta/kerla" color="inherit" sx={{ mr: "1rem" }}>GitHub</Link>
               <Link href="https://discord.gg/6Pu4ujpp6h" color="inherit">Discord</Link>
             </Typography>
