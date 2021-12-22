@@ -42,6 +42,7 @@ const Home: NextPage = () => {
 
             <Button color="inherit" href="/docs">Docs</Button>
             <Button color="inherit" href="https://github.com/nuta/kerla">GitHub</Button>
+            <Button color="inherit" href="https://discord.gg/6Pu4ujpp6h">Discord</Button>
           </Toolbar>
         </AppBar>
 
@@ -68,7 +69,6 @@ const Home: NextPage = () => {
               >
                 <Button variant="contained" href="/docs/quickstart.html">Quickstart</Button>
                 <Button variant="outlined" href="https://github.com/nuta/kerla">GitHub</Button>
-                <Button variant="outlined" href="https://discord.gg/6Pu4ujpp6h">Discord</Button>
               </Stack>
 
               <Box sx={{ pt: 4 }}>
