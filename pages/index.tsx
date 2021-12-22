@@ -87,7 +87,7 @@ const Home: NextPage = () => {
               component="p"
             >
               Made by Kerla Authors.<br />
-              <Link href="/docs/index.html" color="inherit">Docs</Link>
+              <Link href="/docs/index.html" color="inherit" sx={{ mr: "1rem" }}>Docs</Link>
               <Link href="https://github.com/nuta/kerla" color="inherit" sx={{ mr: "1rem" }}>GitHub</Link>
               <Link href="https://discord.gg/6Pu4ujpp6h" color="inherit">Discord</Link>
             </Typography>
